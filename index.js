@@ -3,9 +3,9 @@ const github = require('@actions/github');
 const fs = require('fs');
 
 // versionCode — A positive integer [...] -> https://developer.android.com/studio/publish/versioning
-const versionCodeRegexPattern = /(versionCode(?:\s|=)*)(.*)/;
+const versionCodeRegexPattern = /(version_code(?:\s|=)*)(.*)/;
 // versionName — A string used as the version number shown to users [...] -> https://developer.android.com/studio/publish/versioning
-const versionNameRegexPattern = /(versionName(?:\s|=)*)(.*)/;
+const versionNameRegexPattern = /(version_name(?:\s|=)*)(.*)/;
 
 try {
     const gradlePath = core.getInput('gradlePath');
